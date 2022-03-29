@@ -1,4 +1,9 @@
+
 /* Begin: header */
+.four-row{
+    width: 24%;
+    height: 100%;
+}
 .header{
     height: var(--header-height);
     background: linear-gradient(0,  #ff66adb6,	#FF9966);
@@ -299,5 +304,40 @@
 }
 
 .footer{
+    padding: 2.375rem 3.5rem 1.875rem;
+    background-color: #333f48;
+    color: #fff;
+    display: flex;
+    font-size: 12px;
+}
 
+.footer__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer h3{
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.footer li{
+    list-style-type: none;
+    margin: 0 0 0.75rem;
+}
+
+.footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.footer__Cty p{
+    margin-bottom: 0.5rem ;
+ 
 }
