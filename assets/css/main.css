@@ -9,16 +9,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 60px;
 }
 
 .header__navbar-list {
     list-style: none;
+    padding: 0;
+    flex: 1;
 }
 
 .header__navbar-item {
     position: relative;
-    margin: 0 8px;
-    padding: 0 2px;
+    margin: 0 16px;
+    padding: 0 8px;
 }
 
 .header__navbar-item--has-notify:hover .header__notify {
@@ -44,13 +47,28 @@
     cursor: pointer;
  }
 
+ .header .header__logo {
+    margin: 0 42px 0;
+    flex: 5;
+    text-align: center;
+}
+
+.header .header__logo a {
+    text-decoration: none;
+    margin: 0;
+    padding: 16px;
+    color: var(--text-color);
+    font-size: 2.6rem;
+    font-weight: 800;
+}
+
  /* Header notification  */
  .header__notify {
      position: absolute;
      z-index: 3;
      width: 406px;
-     top: 100%;
-     right: 0;
+     top: calc(100% + 4px);
+     right: -20px;
      background-color: var(--white-color);
      border: 1px solid rgba(0, 0, 0, 0.1);
      border-radius: 3px;
@@ -179,118 +197,66 @@
     text-decoration: none;
  }
 
- /* Header with search */
- .header-with-search {
-    display: flex;
-    align-items: center;
-    height: var(--header-with-search-height);
+ /* Begin header menu */
+ .header-menu {
+     display: flex;
+     justify-content: center;
+     height: var(--menu-height);
  }
- 
-.header .header__logo {
-    margin: 0 42px 0;
-}
 
-.header .header__logo a {
-    text-decoration: none;
+ .menu-list {
     margin: 0;
-    padding: 16px;
-    color: var(--text-color);
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-.header__search {
-    flex: 1;
+    padding: 0;
+    height: 100%;
     display: flex;
     align-items: center;
-    height: 40px;
-    border-radius: 3px;
-    background-color: var(--white-color);
-}
+ }
 
-.header__search-input-wrap {
-    flex: 1;
-    height: 100%;
-    position: relative;
-}
-
-.header__search-input {
-    width: 100%;
-    height: 100%;
-    font-size: 1.2rem;
-    padding: 0 16px;
-    border: none;
-    border-radius: 3px;
-    color: var(--text-color);
-    outline: none;
-}
-
-.header__search-input:focus ~ .header__search-history{
-    display: block;
-}
-
-/* Header history */
-.header__search-history {
-    position: absolute;
-    z-index: 2;
-    top: calc(100% + 3px);
-    left: 0;
-    width: calc(100% - 32px);
-    border-radius: 2px;
-    background-color: #fff;
-    box-shadow: 0 0 3px #e0e0e0;
-    display: none;
-}
-
-.header__search-history-header {
-    font-size: 1.4rem;
-    font-weight: 300;
-    color: #999;
-    margin: 8px 12px;
-}
-
-.search-history__list {
-    padding: 0;
-    margin: 0;
-}
-
-.search-history__item {
-    height: 38px;
-    list-style: none;
-    padding: 0 12px;
-}
-
-.search-history__item:hover {
-    background-color: #fafafa;
-    cursor: pointer;
-}
-
-.search-history__item-link {
-    display: block;
+ .menu-item {
+     display: inline-block;
+     list-style: none;
+     height: 100%;
+     font-size: 1.6rem;
+     font-weight: 500;
+     letter-spacing: 1px;
+     padding: 0 12px;
+    }
+    
+.menu-item a {
+    --line-height: var(--menu-height);
+    display: inline-block;
     text-decoration: none;
-    font-size: 1.2rem;
-    line-height: 38px;
+    line-height: var(--line-height);
     color: var(--text-color);
-}
+    transition: all 0.1s ease-in 0s;
+ }
 
-.header__search-btn {
-    height: 36px;
-    width: 60px;
-    border: none;
-    border-radius: 3px;
-    margin-right: 2px;
-    background: linear-gradient(0,  #ff66adb6,	#FF9966);
-}
+ .menu-item:hover a {
+     font-size: 1.75rem;
+ }
 
-.header__search-btn:hover {
-    opacity: 0.9;
-    cursor: pointer;
-}
+ .menu-item:hover .menu-item-name::before{
+     transform: scale(1);
+     visibility: visible;
+ }
 
-.header__search-btn-icon {
-    font-size: 1.4rem;
-    color: var(--text-color);
-}
+ .menu-item a .menu-item-name {
+     position: relative;
+ }
+
+ .menu-item a .menu-item-name::before {
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 1px;
+     bottom: 0;
+     left: 0;
+     margin-bottom: -12px;
+     border-bottom: 1px solid var(--text-color);
+     transform: scale(0);
+     visibility: hidden;
+     transition: all 0.2s ease-in-out 0s;
+ }
 
 /* Begin: container */
 .container{
