@@ -3,7 +3,7 @@
     --black-color: #000;
     --text-color: #333;
 
-    --header-height: 120px;
+    --header-height: 110px;
     --navbar-height: 60px;
     --menu-height: calc(var(--header-height) - var(--navbar-height));
 }
@@ -16,7 +16,7 @@ html {
     /* = 10px */
     font-size: 62.5%; 
     line-height: 1.6rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: helveticaNeue,helvetica,Arial,sans-serif;
     box-sizing: border-box;
 }
 
@@ -28,10 +28,25 @@ html {
 
 .grid__header {
     max-width: 100%;
-    padding: 0 20px;
 }
 
 .flex-right {
     display: flex;
     justify-content: flex-end;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+
+}
+
+.column-4 {
+    width: 25%;
+}
+
+.column-5 {
+    width: 20%;
 }
