@@ -40,8 +40,16 @@ html {
     display: flex;
 }
 
-.column {
+.column-full {
+    width: 100%;
+}
 
+.column-2 {
+    width: 50%;
+}
+
+.column-3 {
+    width: calc(100% / 3);
 }
 
 .column-4 {
@@ -50,4 +58,12 @@ html {
 
 .column-5 {
     width: 20%;
+}
+
+.mr-4vw {
+    margin-right: 4vw
+}
+
+.mr-48 {
+    margin-right: 48px;
 }
