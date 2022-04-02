@@ -44,6 +44,16 @@ html {
 
 }
 
+.colum-2 {
+    width: 49%;
+    display: inline-block;
+}
+
+.colum-3{
+    width: 33%;
+    display: inline-block;
+}
+
 .column-4 {
     width: 25%;
 }
