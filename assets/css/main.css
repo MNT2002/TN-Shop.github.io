@@ -15,7 +15,7 @@
 .header__navbar-list {
     list-style: none;
     padding: 0;
-    flex: 1;
+    flex: 3;
 }
 
 .header__navbar-item {
@@ -253,7 +253,7 @@
      height: 1px;
      bottom: 0;
      left: 0;
-     margin-bottom: -4px;
+     margin-bottom: -8px;
      border-bottom: 1px solid var(--text-color);
      transform: scale(0);
      visibility: hidden;
@@ -267,6 +267,7 @@
 
 .container__slider {
     width: 100%;
+    display: flex;
 }
 
 .container__slider-img {
@@ -279,6 +280,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 2vw 4vw;
 }
 
 .product-best-sellers__title {
@@ -377,7 +379,7 @@
 .product-best-sellers__border-bottom {
     position: relative;
     width: 100%;
-    height: 48px;
+    height: 4vh;
 }
 
 .product-best-sellers__border-bottom hr{
@@ -387,8 +389,102 @@
     right: -16px;
     border: 0;
     border-top: 1px solid #d9d9d9;
-    margin: 22px 0;
+    margin: 34px 0 0;
 }
+
+/* Category banner */
+.category-banner-block {
+    padding: 2vw 4vw;
+}
+
+.category-banner-block a:hover .category-banner-item .label-box::before {
+    height: 100%;
+    opacity: 0.6;
+}
+
+.category-banner-block a:hover .category-banner-item .label-wrap p::after {
+    width: 100%;
+    left: 0;
+}
+
+.category-banner-item {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 72%;
+    border-radius: 3px;
+}
+
+.category-banner-item__male {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Ao_sweater/6.jpg);
+}
+
+.category-banner-item__female {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/Nu_ChanVay_QuanShort/1\ -\ Chân\ váy\ ngắn\ phối\ đường\ thêu\ -\ 6.825.000.jpg);
+}
+
+.category-banner-item .label-box {
+    position: absolute;
+    display: flex;
+    align-content: flex-end;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+
+.category-banner-item .label-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient( to top, #000,rgba(0, 0, 0, 0) );;
+    opacity: 0.3;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    transition: all 0.2s;
+}
+
+.category-banner-item .label-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.category-banner-item .label-wrap h4 {
+    display: block;
+    font-size: 2.6rem;
+    color: var(--white-color);
+    letter-spacing: 2px;
+    margin: 18px 0;
+}
+
+.category-banner-item .label-wrap p {
+    position: relative;
+    display: inline;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white-color);
+    margin: 0;
+}
+
+.category-banner-item .label-wrap p::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    height: 1px;
+    width: 0;
+    background: var(--white-color);
+    transition: width .5s;
+}
+
 /* Begin: footer */
 .four-row{
     width: 25%;
