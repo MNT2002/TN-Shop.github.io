@@ -19,6 +19,7 @@ html {
     line-height: 1.6rem;
     font-family: helveticaNeue,helvetica,Arial,sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .grid {
@@ -58,6 +59,9 @@ html {
 
 .column-5 {
     width: 20%;
+}
+.mt-4vw {
+    margin-top: 4vw;
 }
 
 .mr-4vw {
