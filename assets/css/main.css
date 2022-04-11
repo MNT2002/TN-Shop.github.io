@@ -288,6 +288,54 @@
      transition: all 0.2s ease-in-out 0s;
  }
 
+ .menu-item:hover .subnav{
+    visibility: visible;
+}
+
+.menu-item:hover .subdiv{
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.subnav{
+   position: absolute;
+   background-color: #f0f0f0;
+   left: 0;
+   right: 0;
+   display: flex;
+   justify-content: center;
+   visibility: hidden;
+   padding-bottom: 16px;
+}
+
+
+.subnav .subnav-content{
+   text-align: left;
+   min-width: 20%;
+}
+
+.subnav-content .subnav-header{
+   padding-left: 40px;
+}
+
+.subnav-content .subnav-list{
+   list-style: none;
+   font-size: 16px;
+   width: 100%;
+}
+
+.subnav-content .subnav-list a , h5{
+   font-size: 14px;
+}
+
+.subnav-list a:hover{
+   opacity: 0.6;
+}
+
 /* Begin: container */
 .container{
 
