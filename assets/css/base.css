@@ -19,6 +19,7 @@ html {
     line-height: 1.6rem;
     font-family: helveticaNeue,helvetica,Arial,sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .grid {
@@ -40,8 +41,16 @@ html {
     display: flex;
 }
 
-.column {
+.column-full {
+    width: 100%;
+}
 
+.column-2 {
+    width: 50%;
+}
+
+.column-3 {
+    width: calc(100% / 3);
 }
 
 
@@ -51,4 +60,15 @@ html {
 
 .column-5 {
     width: 20%;
+}
+.mt-4vw {
+    margin-top: 4vw;
+}
+
+.mr-4vw {
+    margin-right: 4vw
+}
+
+.mr-48 {
+    margin-right: 48px;
 }
