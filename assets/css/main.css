@@ -259,11 +259,11 @@
      border-bottom: 1px solid var(--text-color);
      transform: scale(0);
      visibility: hidden;
-     transition: all 0.2s ease-in-out 0s;
+     /* transition: all 0.2s ease-in-out 0s; */
  }
 
  .menu-item:hover .subnav{
-     display: block;
+     visibility: visible;
  }
 
  .menu-item:hover .subdiv{
@@ -276,23 +276,30 @@
  }
 
  .subnav{
-    padding: 0 20% 0 35%;
     position: absolute;
     background-color: #f0f0f0;
     left: 0;
     right: 0;
-    display: none;
-   
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    padding-bottom: 16px;
 }
 
 
 .subnav .subnav-content{
     text-align: left;
+    min-width: 20%;
+}
+
+.subnav-content .subnav-header{
+    padding-left: 40px;
 }
 
 .subnav-content .subnav-list{
     list-style: none;
     font-size: 16px;
+    width: 100%;
 }
 
 .subnav-content .subnav-list a , h5{
