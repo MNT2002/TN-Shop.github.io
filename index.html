@@ -32,9 +32,7 @@
     
                     <ul class="header__navbar-list flex-right">
                         <li class="header__navbar-item header__navbar-item--has-notify">
-                            <a class="item-link" href="">
-                                <i class="fa-solid fa-bell"></i>
-                            </a>
+                            <i class="fa-solid fa-bell"></i>
 
                             <!-- Thanh thong bao -->
                             <div class="header__notify-wrap">
@@ -93,19 +91,25 @@
                             </div>
                         </li>
                         <li class="header__navbar-item">
-                            <a class="item-link" href="">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
+                            <i class="fa-solid fa-cart-shopping"></i>
                         </li>
                         <li class="header__navbar-item">
-                            <a class="item-link" href="">
-                                <i class="fa-solid fa-user"></i>
-                            </a>
+                            <i class="fa-solid fa-user"></i>
                         </li>
-                        <li class="header__navbar-item">
-                            <a class="item-link" href="">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </a>
+                        <li class="header__navbar-item header__navbar-item-search">
+                            <form class="form-mini-search" action="">
+                                <div class="search-button-wrap">
+                                    <div class="js-search-button search-button" >
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                </div>
+                                <div class="search-input-wrap">
+                                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                                </div>
+                                <div class="js-close-button close-button-wrap">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            </form>
                         </li>
                     </ul>
                </div>
@@ -373,7 +377,7 @@
         <footer class="footer">
             <div class="grid footer__container">
                 <div class="footer__cty four-row">
-                    <div><h3>công ty tn</h3></div>
+                    <h3>công ty tn</h3>
                     <p>Trụ sở chính: 567 Lê Duẩn, TP.Buôn Mê Thuột</p>
                     <p>Địa chỉ liên hệ: </p>
                     <p>Số điện thoại: </p>
@@ -407,5 +411,41 @@
            
         </footer>
    </div>
+   
+   <script>
+       const navbar = document.querySelector('.header-menu-wrap');
+       const header = document.querySelector('.header');
+
+       let navPos = navbar.getBoundingClientRect().top;
+
+            window.addEventListener("scroll", e => {
+                let scrollPos = window.scrollY;
+                if (scrollPos > navPos) {
+                    navbar.classList.add('sticky');
+                    header.classList.add('header-sticky')
+                } else {
+                    navbar.classList.remove('sticky');
+                    header.classList.remove('header-sticky');
+                }
+            });
+   </script>
+
+   <script>
+    //    bắt sự kiện nhấn nút tìm kiếm
+        const search = document.querySelector('.form-mini-search')
+        const searchButton = document.querySelector('.js-search-button')
+        const closeButton = document.querySelector('.js-close-button ')
+
+        function showMiniSearch (){
+            search.classList.add('active')
+        }
+
+        function hideMiniSearch (){
+            search.classList.remove('active')
+        }
+
+        searchButton.addEventListener('click',showMiniSearch)
+        closeButton.addEventListener('click',hideMiniSearch)
+    </script>
 </body>
 </html>

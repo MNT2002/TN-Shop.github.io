@@ -4,7 +4,7 @@
     --text-color: #333;
     --main-color: linear-gradient(0,#fd56a4e5,#FF9966);
 
-    --header-height: 110px;
+    --header-height: 120px;
     --navbar-height: 60px;
     --menu-height: calc(var(--header-height) - var(--navbar-height));
 }

@@ -18,10 +18,25 @@
     flex: 3;
 }
 
+.header.header-sticky .header__navbar-list.flex-right {
+    position: fixed;
+    z-index: 10000;
+    right: 0;
+    left: auto;
+    top: 0;
+    width: 172px;
+    height: var(--menu-height);
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
 .header__navbar-item {
     position: relative;
     margin: 0 16px;
     padding: 0 8px;
+    text-align: center;
+    min-width: 31.75px;
 }
 
 .header__navbar-item--has-notify:hover .header__notify-wrap {
@@ -35,22 +50,144 @@
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 3rem;
-    letter-spacing: 1px;
     color: var(--text-color);
     text-decoration: none;
 }
 
+.header__navbar-item-search {
+    position: relative;
+}
+
+/* Form mini search */
+.form-mini-search {
+    position: absolute;
+    z-index: 9999;
+    right: 8px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    box-sizing: content-box;
+    background: #fff;
+    transition: width .4s cubic-bezier(.17,.84,.44,1);
+    display: flex;
+}
+
+.form-mini-search.active {
+    margin: 0 -24px;
+    top: -15px;
+    width: 395px;
+    height: var(--navbar-height);
+}
+
+.header.header-sticky .form-mini-search.active {
+    top: -30px;
+}
+
+.form-mini-search.active::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.6;
+    transition: visibility 0s, opacity 0.6s cubic-bezier(.17, .84, .44, 1);
+    cursor: default;
+}
+
+.search-button-wrap {
+    width: 100%;
+}
+
+.form-mini-search.active .search-button-wrap {
+    width: 60px;
+    height: 100%;
+    display: inline-block;
+}
+
+.search-button {
+    border: none;
+    background: #fff;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-mini-search.active .search-button {
+    width: 100%;
+    position: relative;
+}
+
+.search-input-wrap {
+    display: none;
+}
+
+.form-mini-search.active .search-input-wrap {
+    display: block;
+    flex: 1;
+}
+
+.form-mini-search.active .search-input-wrap input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding: 0 0 0 12px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    position: relative;
+    background: #fff;
+}
+
+.close-button-wrap {
+    display: none;
+}
+
+.form-mini-search.active .close-button-wrap {
+    display: block;
+    width: 60px;
+    height: 100%;
+}
+
+.form-mini-search.active .close-button-wrap i {
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    background: #fff;
+}
+/* End: Form mini search */
+
 .header__navbar-item:hover,
+.header__navbar-item:hover i,
 .header__navbar-item .item-link:hover {
     color: rgba(51, 51, 51, 0.7);
-    border-radius: 8px;
     cursor: pointer;
  }
 
  .header .header__logo {
-    margin: 0 42px 0;
-    flex: 5;
+    margin: 0;
+    flex: 3;
     text-align: center;
+}
+
+.header.header-sticky .header__logo {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 18px;
+    right: auto;
+    width: 172px;
+    height: var(--menu-height);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header .header__logo a {
@@ -62,6 +199,11 @@
     font-weight: 800;
 }
 
+.header.header-sticky .header__logo a {
+    padding: 0;
+    color: var(--text-color);
+}
+
  /* Header notification  */
  .header__notify-wrap {
     position: absolute;
@@ -71,7 +213,7 @@
      right: -20px;
      background-color: #fff;
      /* border: 1px solid rgba(0, 0, 0, 0.1); */
-    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
      border-radius: 3px;
      transform-origin: calc(100% - 32px) top;
      animation: headerNotifyGrowth ease-in 0.25s;
@@ -567,7 +709,7 @@
     display: inline-block;
     padding-left: 36px;
     color: var(--text-color);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     text-align: left;
     text-decoration: none;
     letter-spacing: 2px;
@@ -610,6 +752,7 @@
     font-size: 1.6rem;
     margin-bottom: 24px;
     text-transform: uppercase;
+    user-select: none;
 }
 
 .footer li{
