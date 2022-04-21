@@ -22,6 +22,12 @@ html {
     scroll-behavior: smooth;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
 .grid {
     width: 1400px;
     max-width: 100%;
@@ -39,6 +45,10 @@ html {
 
 .row {
     display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 .column-full {
