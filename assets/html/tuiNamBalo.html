@@ -17,106 +17,376 @@
    <div class="main">
        <!-- Header -->
        <header class="header">
-           <div class="grid__header">
-               <div class="header__navbar">
-                    <ul class="header__navbar-list">
-                        <li class="header__navbar-item">
-                            <a class="item-link" href=""><i class="fa-solid fa-house"></i></a>
-                        </li>
-                    </ul>
+        <div class="grid__header">
+            <div class="header__navbar">
+                 <ul class="header__navbar-list nav-menu">
+                     <li style="display: none;" class="header__navbar-item">
+                         <a class="item-link" href="">
+                             <i class="fa-solid fa-house"></i>
+                         </a>
+                     </li>
+                     <!-- Menu on Tablet & Mobile -->
+                     <div class="header__navbar-item navbar-item__menu l-display-none">
+                         <label for="nav-mobile-input" class="item-link" >
+                             <i class="fa-solid fa-bars"></i>
+                         </label>
 
-                    <div class="header__logo">
-                        <!-- <img src="./assets/img/logo.png" alt="Logo-TN-shop"> -->
-                        <a href="/">TN-SHOP</a>
-                    </div>
-    
-                    <ul class="header__navbar-list flex-right">
-                        <li class="header__navbar-item header__navbar-item--has-notify">
-                            <i class="fa-solid fa-bell"></i>
+                         <input hidden type="checkbox" name="" class="nav__input" id="nav-mobile-input">
 
-                            <!-- Thanh thong bao -->
-                            <div class="header__notify-wrap">
-                                <div class="header__notify">
-                                    <header class="header__notify-header">
-                                        <h3>Thông báo mới nhận</h3>
-                                    </header>
-    
-                                    <ul class="header__notify-list">
-                                        <li class="header__notify-item">
-                                            <a href="" class="header__notify-link">
-                                                    <img class="notify-item__img" src="/assets/img/Nu_ChanVay_QuanShort/7 - CHÂN VÁY DỆT KIM - 6.475.000.jpg" alt="">
-        
-                                                <div class="notify-item__content">
-                                                    <span class="notify-item-name">Chân váy dệt kim</span>
-                                                    <p class="notify-item-description">Hoàn tất đặt hàng</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="header__notify-item">
-                                            <a href="" class="header__notify-link">
-                                                    <img class="notify-item__img" src="/assets/img/SP_Ban_Chạy/7 - Đầm dệt kim hai màu - 8.575.000.jpg" alt="">
-        
-                                                <div class="notify-item__content">
-                                                    <span class="notify-item-name">Đầm dệt kim hai màu</span>
-                                                    <p class="notify-item-description">Hoàn tất đặt hàng</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="header__notify-item">
-                                            <a href="" class="header__notify-link">
-                                                    <img class="notify-item__img" src="/assets/img/SP_Ban_Chạy/2 - Áo khoác cardigan len phối hình thêu (8.575.000).jpg" alt="">
-        
-                                                <div class="notify-item__content">
-                                                    <span class="notify-item-name">Áo khoác cardigan len phối hình thêu</span>
-                                                    <p class="notify-item-description">Hoàn tất đặt hàng</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="header__notify-item header__notify-item--viewed">
-                                            <a href="" class="header__notify-link">
-                                                    <img class="notify-item__img" src="/assets/img/SP_Ban_Chạy/3 - Áo thun cotton phối hình (2.975.000).jpg" alt="">
-        
-                                                <div class="notify-item__content">
-                                                    <span class="notify-item-name">Áo thun cotton phối hình</span>
-                                                    <p class="notify-item-description">Hoàn tất đặt hàng</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-    
-                                    <footer class="header__notify-footer">
-                                            <a href="" class="header__footer-btn">Xem tất cả</a>
-                                    </footer>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="header__navbar-item">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </li>
-                        <li class="header__navbar-item">
-                            <i class="fa-solid fa-user"></i>
-                        </li>
-                        <li class="header__navbar-item header__navbar-item-search">
-                            <form class="form-mini-search" action="">
-                                <div class="search-button-wrap">
-                                    <div class="js-search-button search-button" >
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </div>
-                                </div>
-                                <div class="search-input-wrap">
-                                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                                </div>
-                                <div class="js-close-button close-button-wrap">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </div>
-                            </form>
-                        </li>
-                    </ul>
-               </div>
+                         <label for="nav-mobile-input" class="nav-overlay"></label>
 
-               <div class="header-menu-wrap">
+                         <!-- Nav mobile -->
+                         <nav class="nav__mobile">
+                             <label for="nav-mobile-input" class="nav__mobile-close">
+                                 <i class="fa-solid fa-xmark"></i>
+                             </label>
+
+                             <ul class="nav__mobile-list">
+                                 <!-- Thoi trang nam -->
+                                 <li>
+                                     <label for="subnav-mobile-input-nam" class="nav__mobile-link">
+                                         THỜI TRANG NAM
+                                         <i class="icon-angle-right fa-solid fa-angle-right"></i>
+                                     </label>
+
+                                     <input hidden type="checkbox" name="" class="subnav__input" id="subnav-mobile-input-nam">
+                                     
+                                     <!-- Subnav mobile -->
+                                     <div class="subnav__mobile-box">
+                                         <label for="subnav-mobile-input-nam" class="subnav__mobile-return">
+                                             <i class="fa-solid fa-arrow-left"></i>
+                                         </label>
+
+                                         <div class="subnav__mobile-list">
+                                             <p>Quần</p>
+                                             <ul>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnamJeans.html" class="subnav__mobile-link">Quần Jeans</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnamQuanShort.html" class="subnav__mobile-link">Quần short</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnamQuanTay.html" class="subnav__mobile-link">Quần tây</a>
+                                                 </li>
+                                             </ul>
+                                         </div>
+                                         <div class="subnav__mobile-list">
+                                             <p>Áo</p>
+                                             <ul>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnamSoMi.html" class="subnav__mobile-link">Áo sơ mi</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnamAoThun.html" class="subnav__mobile-link">Áo thun</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnamAoHoodie.html" class="subnav__mobile-link">Áo hoodie</a>
+                                                 </li>
+                                             </ul>
+                                         </div>
+                                     </div>
+                                 </li>
+                                 <!-- Thoi trang nu -->
+                                 <li>
+                                     <label for="subnav-mobile-input-nu" class="nav__mobile-link">
+                                         THỜI TRANG NỮ
+                                         <i class="icon-angle-right fa-solid fa-angle-right"></i>
+                                     </label>
+
+                                     <input hidden type="checkbox" name="" class="subnav__input" id="subnav-mobile-input-nu">
+                                     
+                                     <!-- Subnav mobile -->
+                                     <div class="subnav__mobile-box">
+                                         <label for="subnav-mobile-input-nu" class="subnav__mobile-return">
+                                             <i class="fa-solid fa-arrow-left"></i>
+                                         </label>
+
+                                         <div class="subnav__mobile-list">
+                                             <p>Quần</p>
+                                             <ul>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnuJeans.html" class="subnav__mobile-link">Quần Jeans</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnuQuanDai.html" class="subnav__mobile-link">Quần dài</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnuQuanShort.html" class="subnav__mobile-link">Quần short</a>
+                                                 </li>
+                                             </ul>
+                                         </div>
+                                         <div class="subnav__mobile-list">
+                                             <p>Áo</p>
+                                             <ul>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnuAoKhoac.html" class="subnav__mobile-link">Áo khoác Blaze & Jacket</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnuAoSoMi.html" class="subnav__mobile-link">Áo sơ mi</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnuAoThun.html" class="subnav__mobile-link">Áo thun</a>
+                                                 </li>
+                                             </ul>
+                                         </div>
+                                         <div class="subnav__mobile-list">
+                                             <p>Váy</p>
+                                             <ul>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnuChanVay.html" class="subnav__mobile-link">Chân váy</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/thoitrangnuDam.html" class="subnav__mobile-link">Đầm</a>
+                                                 </li>
+                                             </ul>
+                                         </div>
+                                     </div>
+                                 </li>
+                                 <!-- Tui xach -->
+                                 <li>
+                                     <label for="subnav-mobile-input-tui-xach" class="nav__mobile-link">
+                                         TÚI XÁCH
+                                         <i class="icon-angle-right fa-solid fa-angle-right"></i>
+                                     </label>
+
+                                     <input hidden type="checkbox" name="" class="subnav__input" id="subnav-mobile-input-tui-xach">
+                                     
+                                     <!-- Subnav mobile -->
+                                     <div class="subnav__mobile-box">
+                                         <label for="subnav-mobile-input-tui-xach" class="subnav__mobile-return">
+                                             <i class="fa-solid fa-arrow-left"></i>
+                                         </label>
+
+                                         <div class="subnav__mobile-list">
+                                             <p>Nam</p>
+                                             <ul>
+                                                 <li>
+                                                     <a href="/assets/html/tuiNamBalo.html" class="subnav__mobile-link">Balo</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/TuinamTuideocheo.html" class="subnav__mobile-link">Túi đeo chéo</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/TuinamTuilaptop.html" class="subnav__mobile-link">Túi đựng laptop</a>
+                                                 </li>
+                                             </ul>
+                                         </div>
+                                         <div class="subnav__mobile-list">
+                                             <p>Nữ</p>
+                                             <ul>
+                                                 <li>
+                                                     <a href="/assets/html/tuiNuTuideovai.html" class="subnav__mobile-link">Túi đeo vai</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/tuiNuTuideocheo.html" class="subnav__mobile-link">Túi đeo chéo</a>
+                                                 </li>
+                                             </ul>
+                                         </div>
+                                     </div>
+                                 </li>
+                                 <!-- Giay dep -->
+                                 <li>
+                                     <label for="subnav-mobile-input-giay-dep" class="nav__mobile-link">
+                                         GIÀY DÉP
+                                         <i class="icon-angle-right fa-solid fa-angle-right"></i>
+                                     </label>
+
+                                     <input hidden type="checkbox" name="" class="subnav__input" id="subnav-mobile-input-giay-dep">
+                                     
+                                     <!-- Subnav mobile -->
+                                     <div class="subnav__mobile-box">
+                                         <label for="subnav-mobile-input-giay-dep" class="subnav__mobile-return">
+                                             <i class="fa-solid fa-arrow-left"></i>
+                                         </label>
+
+                                         <div class="subnav__mobile-list">
+                                             <p>Nam</p>
+                                             <ul>
+                                                 <li>
+                                                     <a href="/assets/html/giaydepNamBoots.html" class="subnav__mobile-link">Boots</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/giaydepNamSneaker.html" class="subnav__mobile-link">Sneaker</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/giaydepNamSandal.html" class="subnav__mobile-link">Sandal</a>
+                                                 </li>
+                                             </ul>
+                                         </div>
+                                         <div class="subnav__mobile-list">
+                                             <p>Nữ</p>
+                                             <ul>
+                                                 <li>
+                                                     <a href="/assets/html/giaydepNuCaogot.html" class="subnav__mobile-link">Cao gót</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/giaydepNuBoots.html" class="subnav__mobile-link">Boots</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/giaydepNuSneaker.html" class="subnav__mobile-link">Sneaker</a>
+                                                 </li>
+                                             </ul>
+                                         </div>
+                                     </div>
+                                 </li>
+                                 <!-- Phu kien -->
+                                 <li>
+                                     <label for="subnav-mobile-input-phu-kien" class="nav__mobile-link">
+                                         PHỤ KIỆN
+                                         <i class="icon-angle-right fa-solid fa-angle-right"></i>
+                                     </label>
+
+                                     <input hidden type="checkbox" name="" class="subnav__input" id="subnav-mobile-input-phu-kien">
+                                     
+                                     <!-- Subnav mobile -->
+                                     <div class="subnav__mobile-box">
+                                         <label for="subnav-mobile-input-phu-kien" class="subnav__mobile-return">
+                                             <i class="fa-solid fa-arrow-left"></i>
+                                         </label>
+
+                                         <div class="subnav__mobile-list">
+                                             <p>Nam</p>
+                                             <ul>
+                                                 <li>
+                                                     <a href="/assets/html/phukienNamDongho.html" class="subnav__mobile-link">Đồng hồ</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/phukienNamvi.html" class="subnav__mobile-link">Ví</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/phukienNamThatlung.html" class="subnav__mobile-link">Thắt lưng</a>
+                                                 </li>
+                                             </ul>
+                                         </div>
+                                         <div class="subnav__mobile-list">
+                                             <p>Nữ</p>
+                                             <ul>
+                                                 <li>
+                                                     <a href="/assets/html/phukienNuDongho.html" class="subnav__mobile-link">Đồng hồ</a>
+                                                 </li>
+                                                 <li>
+                                                     <a href="/assets/html/phukienNuDaychuyen.html" class="subnav__mobile-link">Dây chuyền</a>
+                                                 </li>   
+                                                 <li>
+                                                     <a href="/assets/html/phukienNuNuochoa.html" class="subnav__mobile-link">Nước hoa bỏ túi</a>
+                                                 </li>
+                                             </ul>
+                                         </div>
+                                     </div>
+                                 </li>
+                             </ul>
+
+                             <ul class="custom-link">
+                                 <li>
+                                     <a href="">
+                                         <i class="custom-link-icon fa-solid fa-user"></i>
+                                         Tài khoản         
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="">
+                                         <i class="custom-link-icon fa-solid fa-shop"></i>
+                                         Dịch vụ khách hàng
+                                     </a>
+                                 </li>
+                             </ul>
+                         </nav>
+                     </div>
+                 </ul>
+
+                 <div class="header__logo">
+                     <!-- <img src="/assets/img/logo.png" alt="Logo-TN-shop"> -->
+                     <a href="/">TN-SHOP</a>
+                 </div>
+ 
+                 <ul class="header__navbar-list flex-right">
+                     <li class="header__navbar-item header__navbar-item--has-notify">
+                         <i class="fa-solid fa-bell"></i>
+
+                         <!-- Thanh thong bao -->
+                         <div class="header__notify-wrap">
+                             <div class="header__notify">
+                                 <header class="header__notify-header">
+                                     <h3>Thông báo mới nhận</h3>
+                                 </header>
+ 
+                                 <ul class="header__notify-list">
+                                     <li class="header__notify-item">
+                                         <a href="" class="header__notify-link">
+                                                 <img class="notify-item__img" src="/assets/img/Nu_ChanVay_QuanShort/7 - CHÂN VÁY DỆT KIM - 6.475.000.jpg" alt="">
+     
+                                             <div class="notify-item__content">
+                                                 <span class="notify-item-name">Chân váy dệt kim</span>
+                                                 <p class="notify-item-description">Hoàn tất đặt hàng</p>
+                                             </div>
+                                         </a>
+                                     </li>
+                                     <li class="header__notify-item">
+                                         <a href="" class="header__notify-link">
+                                                 <img class="notify-item__img" src="/assets/img/SP_Ban_Chạy/7 - Đầm dệt kim hai màu - 8.575.000.jpg" alt="">
+     
+                                             <div class="notify-item__content">
+                                                 <span class="notify-item-name">Đầm dệt kim hai màu</span>
+                                                 <p class="notify-item-description">Hoàn tất đặt hàng</p>
+                                             </div>
+                                         </a>
+                                     </li>
+                                     <li class="header__notify-item">
+                                         <a href="" class="header__notify-link">
+                                                 <img class="notify-item__img" src="/assets/img/SP_Ban_Chạy/2 - Áo khoác cardigan len phối hình thêu (8.575.000).jpg" alt="">
+     
+                                             <div class="notify-item__content">
+                                                 <span class="notify-item-name">Áo khoác cardigan len phối hình thêu</span>
+                                                 <p class="notify-item-description">Hoàn tất đặt hàng</p>
+                                             </div>
+                                         </a>
+                                     </li>
+                                     <li class="header__notify-item header__notify-item--viewed">
+                                         <a href="" class="header__notify-link">
+                                                 <img class="notify-item__img" src="/assets/img/SP_Ban_Chạy/3 - Áo thun cotton phối hình (2.975.000).jpg" alt="">
+     
+                                             <div class="notify-item__content">
+                                                 <span class="notify-item-name">Áo thun cotton phối hình</span>
+                                                 <p class="notify-item-description">Hoàn tất đặt hàng</p>
+                                             </div>
+                                         </a>
+                                     </li>
+                                 </ul>
+ 
+                                 <footer class="header__notify-footer">
+                                         <a href="" class="header__footer-btn">Xem tất cả</a>
+                                 </footer>
+                             </div>
+                         </div>
+                     </li>
+                     <li class="header__navbar-item">
+                         <i class="fa-solid fa-cart-shopping"></i>
+                     </li>
+                     <li class="header__navbar-item display-none">
+                         <i class="fa-solid fa-user"></i>
+                     </li>
+                     <li class="header__navbar-item header__navbar-item-search">
+                         <form class="form-mini-search" action="">
+                             <div class="search-button-wrap">
+                                 <div class="js-search-button search-button" >
+                                     <i class="fa-solid fa-magnifying-glass"></i>
+                                 </div>
+                             </div>
+                             <div class="search-input-wrap">
+                                 <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                             </div>
+                             <div class="js-close-button close-button-wrap">
+                                 <i class="fa-solid fa-xmark"></i>
+                             </div>
+                         </form>
+                     </li>
+                 </ul>
+            </div>
+
+            <div class="header-menu-wrap">
                 <div class="header-menu">
-                    <ul class="menu-list">
+                    <ul class="menu-list display-none">
                         <li class="menu-item">
                             <a href="/assets/html/thoitrangnamJeans.html">
                                 <span class="menu-item-name">Thời trang nam</span> 
@@ -151,7 +421,7 @@
                              </div>
                         </li>
                         <li class="menu-item">
-                            <a href="">
+                            <a href="/assets/html/thoitrangnuJeans.html">
                                 <span class="menu-item-name">Thời trang nữ</span>
                              </a>
 
@@ -163,9 +433,9 @@
                                      </div>
                                      <ul class="subnav-list">
                                          
-                                         <li><a href="">Jeans</a></li>
-                                         <li><a href="">Quần dài</a></li>
-                                         <li><a href="">Quần short</a></li>
+                                         <li><a href="/assets/html/thoitrangnuJeans.html">Jeans</a></li>
+                                         <li><a href="/assets/html/thoitrangnuQuanDai.html">Quần dài</a></li>
+                                         <li><a href="/assets/html/thoitrangnuQuanShort.html">Quần short</a></li>
                                          
                                      </ul>
                                  </div>
@@ -176,9 +446,9 @@
                                      </div>
                                      <ul class="subnav-list">
                                          
-                                         <li><a href="">Áo khoác Blaze & Jacket</a></li>
-                                         <li><a href="">Áo sơ mi</a></li>
-                                         <li><a href="">Áo thun</a></li>
+                                         <li><a href="/assets/html/thoitrangnuAoKhoac.html">Áo khoác Blaze & Jacket</a></li>
+                                         <li><a href="/assets/html/thoitrangnuAoSoMi.html">Áo sơ mi</a></li>
+                                         <li><a href="/assets/html/thoitrangnuAoThun.html">Áo thun</a></li>
                                          
                                      </ul>
                                  </div>
@@ -189,15 +459,15 @@
                                      </div>
                                      <ul class="subnav-list">
                                          
-                                         <li><a href="">Chân váy</a></li>
-                                         <li><a href="">Đầm</a></li>
+                                         <li><a href="/assets/html/thoitrangnuChanVay.html">Chân váy</a></li>
+                                         <li><a href="/assets/html/thoitrangnuDam.html">Đầm</a></li>
                                      </ul>
                                  </div>
                                  
                              </div>
                         </li>
                         <li class="menu-item">
-                            <a href="">
+                            <a href="/assets/html/tuiNamBalo.html">
                                 <span class="menu-item-name">Túi xách</span>
                              </a>
                              <div class="subnav">
@@ -207,7 +477,7 @@
                                      </div>
                                      <ul class="subnav-list">
                                         
-                                         <li><a href="/assets/html/tuiNamBalo.html">Balo</a></li>
+                                         <li><a href="/assets/html/tuiNamBalo.html">balo</a></li>
                                          <li><a href="/assets/html/TuinamTuideocheo.html">Túi đeo chéo nam</a></li>
                                          <li><a href="/assets/html/TuinamTuilaptop.html">Túi xách đựng laptop</a></li>
                                          
@@ -219,18 +489,15 @@
                                          <h5>Nữ</h5>
                                      </div>
                                      <ul class="subnav-list">
-                                         
-                                         <li><a href="">Túi đeo vai</a></li>
-                                         <li><a href="">Túi tote</a></li>
-                                         <li><a href="">Túi đeo chéo</a></li>
-                                         
+                                         <li><a href="/assets/html/tuiNuTuideovai.html">Túi đeo vai</a></li>
+                                         <li><a href="/assets/html/tuiNuTuideocheo.html">Túi đeo chéo</a></li>
                                      </ul>
                                  </div>
                                  
                              </div>
                         </li>
                         <li class="menu-item">
-                            <a href="">
+                            <a href="/assets/html/giaydepNamSneaker.html">
                                 <span class="menu-item-name">Giày dép</span>
                              </a>
 
@@ -240,9 +507,9 @@
                                          <h5>Nam</h5>
                                      </div>
                                      <ul class="subnav-list">
-                                         <li><a href="">Boots</a></li>
-                                         <li><a href="">Sneaker</a></li>
-                                         <li><a href="">sandal</a></li>
+                                         <li><a href="/assets/html/giaydepNamBoots.html">Boots</a></li>
+                                         <li><a href="/assets/html/giaydepNamSneaker.html">Sneaker</a></li>
+                                         <li><a href="/assets/html/giaydepNamSandal.html">sandal</a></li>
                                          
                                      </ul>
                                  </div>
@@ -253,9 +520,9 @@
                                      </div>
                                      <ul class="subnav-list">
                                          
-                                         <li><a href="">Cao gót</a></li>
-                                         <li><a href="">Boots</a></li>
-                                         <li><a href="">Sneaker</a></li>
+                                         <li><a href="/assets/html/giaydepNuCaogot.html">Cao gót</a></li>
+                                         <li><a href="/assets/html/giaydepNamSneaker.html">Sneaker</a></li>
+                                         <li><a href="/assets/html/giaydepNuBoots.html">Boots</a></li>
                                          
                                      </ul>
                                  </div>
@@ -264,7 +531,7 @@
 
                         </li>
                         <li class="menu-item">
-                            <a href="">
+                            <a href="/assets/html/phukienNamDongho.html">
                                 <span class="menu-item-name">Phụ kiện</span>
                              </a>
 
@@ -275,9 +542,9 @@
                                      </div>
                                      <ul class="subnav-list">
                                          
-                                         <li><a href="">Đồng hồ </a></li>
-                                         <li><a href="">Ví</a></li>
-                                         <li><a href="">Thắt lưng</a></li>
+                                         <li><a href="/assets/html/phukienNamDongho.html">Đồng hồ </a></li>
+                                         <li><a href="/assets/html/phukienNamvi.html">Ví</a></li>
+                                         <li><a href="/assets/html/phukienNamThatlung.html">Thắt lưng</a></li>
                                          
                                      </ul>
                                  </div>
@@ -288,9 +555,9 @@
                                      </div>
                                      <ul class="subnav-list">
                                          
-                                         <li><a href="">Đồng hồ</a></li>
-                                         <li><a href="">Dây chuyền</a></li>
-                                         <li><a href="">Nước hoa bỏ túi</a></li>
+                                         <li><a href="/assets/html/phukienNuDongho.html">Đồng hồ</a></li>
+                                         <li><a href="/assets/html/phukienNuDaychuyen.html">Dây chuyền</a></li>
+                                         <li><a href="/assets/html/phukienNuNuochoa.html">Nước hoa bỏ túi</a></li>
                                          
                                      </ul>
                                  </div>
@@ -300,9 +567,9 @@
                     </ul>
                 </div>
             </div>
-           </div>
-            
-       </header>
+        </div>
+         
+        </header>
 
        <!-- Body -->
         <div class="container">
@@ -315,7 +582,7 @@
 
             <div class="product-container">
                 <div class="row flex-wrap" style="margin: 0 -4px">
-                    <div class="column-4 product-item-wrapper">
+                    <div class="col-2 col-3 column-4 product-item-wrapper">
                         <a href="" class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
@@ -333,7 +600,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="column-4 product-item-wrapper">
+                    <div class="col-2 col-3 column-4 product-item-wrapper">
                         <a href="" class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
@@ -351,7 +618,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="column-4 product-item-wrapper">
+                    <div class="col-2 col-3 column-4 product-item-wrapper">
                         <a href="" class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
@@ -369,7 +636,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="column-4 product-item-wrapper">
+                    <div class="col-2 col-3 column-4 product-item-wrapper">
                         <a href="" class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
@@ -387,7 +654,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="column-4 product-item-wrapper">
+                    <div class="col-2 col-3 column-4 product-item-wrapper">
                         <a href="" class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
@@ -405,7 +672,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="column-4 product-item-wrapper">
+                    <div class="col-2 col-3 column-4 product-item-wrapper">
                         <a href="" class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
@@ -423,7 +690,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="column-4 product-item-wrapper">
+                    <div class="col-2 col-3 column-4 product-item-wrapper">
                         <a href="" class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
@@ -441,7 +708,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="column-4 product-item-wrapper">
+                    <div class="col-2 col-3 column-4 product-item-wrapper">
                         <a href="" class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
@@ -459,7 +726,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="column-4 product-item-wrapper">
+                    <div class="col-2 col-3 column-4 product-item-wrapper">
                         <a href="" class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
@@ -483,12 +750,12 @@
             <!-- Contact -->
             <div class="Contact-block">
                 <div class="reinsurance-container">
-                    <div class="row">
+                    <div class="row c-flex-direction">
                         <div class="column-4 reinsurance-item-wrap">
                             <div class="reinsurance-item">
                                  <a href="#" class="reinsurance-item-link">
                                     <span class="icon-wrap">
-                                         <img src="./assets/img/Icon - reinsurance/1.png" alt="">
+                                         <img src="/assets/img/Icon - reinsurance/1.png" alt="">
                                     </span>
                                     Cam kết
                                     <br>
@@ -500,7 +767,7 @@
                             <div class="reinsurance-item">
                                  <a href="#" class="reinsurance-item-link">
                                     <span class="icon-wrap">
-                                         <img src="./assets/img/Icon - reinsurance/2.png" alt="">
+                                         <img src="/assets/img/Icon - reinsurance/2.png" alt="">
                                     </span>
                                     Thanh toán an toàn
                                  </a>
@@ -510,23 +777,23 @@
                             <div class="reinsurance-item">
                                  <a href="#" class="reinsurance-item-link">
                                     <span class="icon-wrap">
-                                         <img src="./assets/img/Icon - reinsurance/3.png" alt="">
+                                         <img src="/assets/img/Icon - reinsurance/3.png" alt="">
                                     </span>
                                     Theo dõi đơn hàng
                                  </a>
                             </div>
                         </div>
-                        <div class="column-4 reinsurance-item-wrap" style="border: none;">
+                        <div class="column-4 reinsurance-item-wrap border-none">
                             <div class="reinsurance-item">
                                  <a href="#" class="reinsurance-item-link">
                                     <span class="icon-wrap">
-                                         <img src="./assets/img/Icon - reinsurance/1.png" alt="">
+                                         <img src="/assets/img/Icon - reinsurance/1.png" alt="">
                                     </span>
                                     Hỗ trợ khách hàng
                                     <br>
-                                    (+84) 0929 052 864 - Mr.Nhat
+                                    0929 052 864 (Nhật)
                                     <br>
-                                    (+84) 0326 732 416 - Mr.Thanh
+                                    0326 732 416 (Thành)
                                  </a>
                             </div>
                         </div>
@@ -537,7 +804,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="grid footer__container">
+            <div class="grid footer__container c-flex-wrap">
                 <div class="footer__cty four-row">
                     <h3>công ty tn</h3>
                     <p>Trụ sở chính: 567 Lê Duẩn, TP.Buôn Mê Thuột</p>
@@ -566,7 +833,7 @@
                     <li><a href="">Chính sách bảo mật</a></li>
                     <li><a href="">Chính sách Cookie</a></li>
                     
-                    <img src="./assets/img/bocongthuong.png" alt="">
+                    <img src="/assets/img/bocongthuong.png" alt="">
                 </div>
             </div>
             
