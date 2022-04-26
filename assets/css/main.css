@@ -33,7 +33,7 @@
 
 .header__navbar-item {
     position: relative;
-    margin: 0 16px;
+    margin: 0 12px;
     padding: 0 8px;
     text-align: center;
     min-width: 31.75px;
@@ -882,7 +882,7 @@
 .four-row{
     width: 25%;
     height: 100%;
-    padding: 0 72px;
+    padding: 0px 58px;
 }
 
 .footer{
@@ -923,4 +923,318 @@
 .footer__Cty p{
     margin-bottom: 0.5rem ;
  
+}
+
+/* Menu on Tablet & Mobile*/
+.nav-overlay {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.1s;
+}
+
+.nav__mobile {
+    position: fixed;
+    z-index: 10001;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform linear 0.1s;
+}
+.nav__mobile-list {
+    padding-left: 0;
+    margin-top: 38px;
+    list-style: none;
+}
+.nav__mobile-list > li {
+    border-bottom: 1px solid #dedede;
+    padding: 6px 12px;
+}
+.nav__mobile-link {
+    text-decoration: none;
+    text-align: left;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+}
+
+.nav__mobile-close {
+    font-size: 2.8rem;
+    color: #666;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0 12px;
+}
+.subnav__mobile-return {
+    font-size: 2rem;
+    color: #666;
+    position: absolute;
+    top: -3.8rem;
+    left: 1rem;
+    padding: 0 12px;
+}
+
+.icon-angle-right {
+    flex: 1;
+    text-align: right;
+    font-size: 24px;
+}
+
+.nav__input:checked ~ .nav-overlay {
+    display: block;
+}
+
+.nav__input:checked ~ .nav__mobile {
+    transform: translateX(0);
+}
+/* .nav__input:checked ~ .subnav__mobile-box {
+    visibility: hidden;
+    opacity: 0;
+} */
+
+.subnav__input:checked ~ .subnav__mobile-box {
+    visibility: visible;
+    right: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Subnav mobile */
+.subnav__mobile-box {
+    background-color: #fff;
+    position: absolute;
+    z-index: 10002;
+    top: 38px;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin-top: 12px;
+    visibility: hidden;
+
+    transition: all linear 0.2s;
+}
+.subnav__mobile-list p {
+    height: 20px;
+    line-height: 20px;
+    background-color: #f4f4f4;
+    padding: 0 20px;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2.24px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.subnav__mobile-list ul{
+    padding: 0;
+}
+.subnav__mobile-list li {
+    list-style: none;
+    padding: 0 20px;
+    line-height: 60px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+.subnav__mobile-link {
+    color: #333;
+    text-decoration: none;
+}
+
+.custom-link {
+    padding: 0;
+    background-color: #000;
+}
+
+.custom-link li {
+    text-align: left;
+    list-style: none;
+    padding: 6px 12px;
+    border: 0.5px solid rgb(54, 54, 54);
+}
+.custom-link li a {
+    text-decoration: none;
+    color: rgb(223, 223, 223);
+}
+.custom-link li a .custom-link-icon{
+    color: rgb(223, 223, 223);
+    margin-right: 12px;
+}
+/* Mobile & Tablet */
+@media (max-width: 63.9475em) {
+    .display-none {
+        display: none;
+    }
+    .header.header-sticky .header__navbar-list.nav-menu {
+        position: fixed;
+        z-index: 10001;
+        top: 0;
+        left: 0;
+        right: auto;
+        width: 172px;
+        height: var(--menu-height);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    .header.header-sticky .header__logo {
+        left: 0;
+        width: 100%;
+    }
+    .four-row {
+        padding: 0 16px;
+    }
+    .navbar-item__menu {
+        display: inline-block;
+    }
+}
+
+/* Mobile */
+@media (max-width: 46.1875em) {
+    .c-display-none {
+        display: none;
+    }
+    .c-flex-direction {
+        flex-direction: column;
+    }
+    .c-flex-wrap {
+        flex-wrap: wrap;
+    }
+    .c-mt-0 {
+        margin-top: 0;
+    }
+    .c-mr-0 {
+        margin-right: 0;
+    }
+    .col-1 {
+        width: 100%;
+    }
+    .col-2 {
+        width: 50%;
+    }
+
+    /* Header */
+    .header .header__logo a {
+        padding: 0;
+        font-size: 2.4rem;
+    }
+    .header__navbar-item, .header__navbar-item .item-link {
+        font-size: 1.4rem;
+    }
+    .header__navbar-item {
+        margin: 0 4px;
+    }
+    .form-mini-search {
+        right: 0;
+    }
+    .header__notify-wrap {
+        width: 282px;
+        right: -66px;
+    }
+
+    /* Best sellers  */
+    .product-best-sellers__title {
+        font-size: 1.4rem;
+    }
+
+    .item__name,.item__price {
+        font-size: 1.3rem;
+    }
+
+    .item__btn {
+        min-width: 112px;
+        font-size: 1rem;
+        padding: 6px 16px;
+    }
+
+    /* Category */
+    .category-banner-block {
+        padding: 0;
+    }
+    .category-banner-item .label-box {
+        padding: 6px;
+    }
+    .category-banner-item .label-wrap h4 {
+        font-size: 1.6rem;
+        margin: 8px 0;
+    }
+    .category-banner-item .label-wrap p {
+        font-size: 1rem;
+    }
+    /* Contact */
+    .reinsurance-item-wrap {
+        width: 100%;
+        height: 49px;
+        text-align: left;
+        border-right: none;
+        border-bottom: 1px solid #e6e6e6;
+    }
+    .reinsurance-item {
+        padding: 4px 0;
+    }
+    .reinsurance-item-link {
+        font-size: 0.75rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 0;
+    }
+    .four-row {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 46.25em) and (max-width: 63.9475em) {
+    .m-display-none {
+        display: none;
+    }
+    .col-3 {
+        width: calc(100% / 3);
+    }
+    .header .header__logo a {
+        font-size: 2.8rem;
+    }
+    .header__navbar-item, .header__navbar-item .item-link {
+        font-size: 1.6rem;
+    }
+}
+
+/* >= Tablet */
+@media (min-width: 46.25em) {
+    .border-none {
+        border: none
+    }
+}
+
+@media (min-width: 64em) {
+    .l-display-none {
+        display: none;
+    }
 }
