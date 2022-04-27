@@ -1162,6 +1162,12 @@
     .header__notify-wrap {
         width: 282px;
         right: -66px;
+        transform-origin: calc(100% - 58px) top;
+    }
+    .header__notify-wrap::before {
+        top: -28px;
+        right: 60px;
+        border-width: 14px 20px;
     }
 
     /* Best sellers  */
