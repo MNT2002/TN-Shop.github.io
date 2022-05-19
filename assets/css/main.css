@@ -336,6 +336,7 @@
      line-height: 8px;
      color: #fff;
      letter-spacing: 0.5px;
+     text-align: left;
  }
 
  .header__notify-footer {
