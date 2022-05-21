@@ -171,7 +171,6 @@
     top: 0;
     width: 100%;
     height: 100%;
-    padding-top: 120px;
     font-size: 1.4rem;
     line-height: 3rem;
     background-color: rgba(0,0,0,0.6);
@@ -180,7 +179,9 @@
     display: none;
 }
 .form-sign-up.active {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sign-up-wrapper{
@@ -192,15 +193,15 @@
     position: relative;
     border-radius: 12px;
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
-    animation: slip linear 0.3s;
+    animation: slipUp linear 0.3s;
 }
-@keyframes slip {
+@keyframes slipUp {
     from {
-        top: -300px;
+        bottom: -300px;
         opacity: 0;
     }
     to{
-        top: 0;
+        bottom: 0;
         opacity: 1;
     }
 }
@@ -224,17 +225,18 @@
     left: 0;
     top: 0;
     width: 100%;
-    margin: 18px 0;
+    margin: 24px 0;
     font-size: 2.6rem;
     /* color: #FF9966; */
     color: var(--text-color2);
     font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     user-select: none;
     text-align: center;
     text-transform: uppercase
 }
 .sign-up-box-left {
-    padding-top: 66px;
+    padding-top: 78px;
     background: var(--main-color);
     border-bottom-left-radius: 12px;
     border-top-left-radius: 12px;
@@ -294,11 +296,13 @@
 }
 
 .sign-up-box-left form button {
-    margin-top: 4px;
     width: 100%;
-    font-size: 1.6rem;
+    margin-top: 4px;
     border: none;
-    padding: 8px 16px;
+    padding: 10px 16px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
     cursor: pointer;
     color: var(--text-color2);
     position: relative;
@@ -327,6 +331,53 @@
     transform: scaleX(1);
 }
 
+.connect-other-account{
+    margin-top: 24px;
+    display: none;
+}
+.line-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.line-wrapper .line {
+    height: 1px;
+    width: 100%;
+    background-color: var(--text-color);
+    flex: 1;
+    opacity: 0.6;
+}
+.line-wrapper span {
+    color: var(--text-color);
+    padding: 0 1.2rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+.connect-other-account-box{
+    width: 50%;
+    display: flex;
+    color: #fff;
+    padding: 8px 14px;
+    margin: 0px 6px;
+}
+.connect-other-account-wrapper {
+    display: flex; 
+    margin: 0px -6px;
+}
+.connect-other-account__icon{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    font-size: 2.2rem;
+}
+.connect-other-account__name{
+    flex: 1;
+    user-select: none;
+    font-size: 1.6rem;
+}
+
 .haven-account-wrapper {
     text-align: center;
     margin: 46px 0 12px;
@@ -337,18 +388,19 @@
     margin: 0;
 }
 
-.haven-account-wrapper a{
+.haven-account-wrapper span {
     font-size: 1.3rem;
     color: #dedede;
     transition: color .2s;
     display: inline-block;
 }
-.haven-account-wrapper a:hover{
+.haven-account-wrapper span:hover{
     color: #FF9966;
+    cursor: pointer;
 }
 
 .sign-up-box-right {
-    padding-top: 66px;
+    padding-top: 78px;
     background: #dedede;
     border-bottom-right-radius: 12px;
     border-top-right-radius: 12px;
@@ -412,6 +464,230 @@
 }
 
 /* End: Form sign up */
+/* Form sign in */
+.form-sign-in{
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    background-color: rgba(0,0,0,0.6);
+    transition: visibility 0s, opacity 0.6s cubic-bezier(.17, .84, .44, 1);
+    cursor: default;
+    display: none;
+}
+.form-sign-in.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-in-wrapper{
+    width: 800px;
+    background: var(--white-color);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+    animation: slipDown linear 0.3s;
+}
+@keyframes slipDown {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.sign-in-close-button {
+    position: absolute;
+    z-index: 2;
+    top: 1rem;
+    right: 1rem;
+    padding: 0 12px;
+    font-size: 2.4rem;
+    color: var(--text-color2);
+}
+.sign-in-close-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.sign-in-wrapper h1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 24px 0;
+    font-size: 2.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* color: #FF9966; */
+    color: var(--text-color2);
+    font-weight: 800;
+    user-select: none;
+    text-align: center;
+    text-transform: uppercase
+}
+.sign-in-box-left {
+    padding-top: 78px;
+    background: var(--main-color);
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.sign-in-box-left form {
+    padding: 0 64px;
+}
+
+.sign-in-box-left .input-box h3 {
+    color: var(--text-color2);
+    margin: 4px 0 0;
+    user-select: none;
+}
+
+.sign-in-box-left input {
+    width: 100%;
+    border: none;
+    padding: 12px 0;
+    background: rgba(0,0,0,0);
+    border-bottom: 1px solid #435160;
+    outline: none;
+}
+
+.sign-in-box-left form button {
+    width: 100%;
+    margin-top: 32px;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--text-color2);
+    position: relative;
+    transition: color .5s;
+    z-index: 2;
+}
+
+.sign-in-box-left .forget-wrapper {
+    margin: 4px -12px 0;
+}
+.sign-in-box-left .forget-wrapper a{
+    display: inline-block;
+    padding: 0 12px;
+    color: var(--text-color2);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.sign-in-box-left .forget-wrapper a:hover{
+    color: #4d5c6d;
+}
+
+.sign-in-box-left button:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--text-color);
+    transform-origin: 0 0;
+    transform: scaleX(0);
+    transition: transform 0.5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    z-index: -1;
+}
+
+.sign-in-box-left button:hover {
+    color: #FF9966;
+}
+.sign-in-box-left button:hover:before {
+    transform: scaleX(1);
+}
+
+
+
+.haven-account-wrapper {
+    text-align: center;
+    margin: 46px 0 12px;
+}
+.haven-account-wrapper h5{
+    font-size: 1.3rem;
+    color: var(--text-color2);
+    margin: 0;
+}
+
+.sign-in-box-right {
+    padding-top: 78px;
+    background: #dedede;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.connect-other-wrapper {
+    padding: 0 64px;
+    margin-bottom: 24px;
+}
+.connect-other-box {
+    display: flex;
+    color: #fff;
+    padding: 12px 12px;
+}
+.connect-other-box-facebook {
+    background-color: #466fb1;
+    -webkit-tap-highlight-color: transparent;
+}
+.connect-other-box-facebook:hover {
+    background-color: #4065a0;
+    cursor: pointer;
+}
+.connect-other-box-google {
+    background-color: #DC5235;
+    -webkit-tap-highlight-color: transparent;
+}
+.connect-other-box-google:hover {
+    background-color: #b9442d;
+    cursor: pointer;
+}
+.icon-connect-other {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    font-size: 2.2rem;
+}
+.connect-content {
+    flex: 1;
+    padding-left: 18px; 
+    user-select: none;
+}
+
+.or-box {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(50%,-50%);
+    border-radius: 50%;
+    background: #d0d0d0;
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+/* End: Form sign in */
 
 .header__navbar-item:hover,
 .header__navbar-item:hover i,
@@ -1400,16 +1676,55 @@ transform: scaleX(1);
     .menu-icon {
         padding: 4px 8px;
     }
+    
+    /* sign up form */
+    .sign-up-wrapper h1 {
+        font-size: 2.8rem;
+    }
     .sign-up-box-left form {
         padding: 0px 38px;
     }
     .connect-other-wrapper {
         padding: 0px 38px;
     }
+    .sign-up-box-left .input-box h3 {
+        font-size: 1.8rem;
+    }
+    .sign-up-box-left input {
+        font-size: 1.6rem;
+    }
+    .sign-up-box-left form button {
+        font-size: 1.7rem;
+    }
+    .connect-content {
+        font-size: 1.5rem;
+    }
+    .haven-account-wrapper {
+        margin-bottom: 8px;
+    }
+    .haven-account-wrapper span {
+        font-size: 1.4rem;
+    }
+    /* sign in form */
+    .sign-in-wrapper h1 {
+        font-size: 2.8rem;
+    }
+    .sign-in-box-left form {
+        padding: 0px 38px;
+    }
+    .sign-in-box-left .input-box h3 {
+        font-size: 1.8rem;
+    }
+    .sign-in-box-left input {
+        font-size: 1.6rem;
+    }
+    .sign-in-box-left form button {
+        font-size: 1.7rem;
+    }
 }
 
 /* Mobile */
-@media (max-width: 46.1875em) {
+@media (max-width: 46.2499em) {
     .c-display-none {
         display: none;
     }
@@ -1425,8 +1740,14 @@ transform: scaleX(1);
     .c-mr-0 {
         margin-right: 0;
     }
+    .c-0 {
+        display: none;
+    }
     .c-6 {
         width: 50%;
+    }
+    .c-12 {
+        width: 100%;
     }
     .col-1 {
         width: 100%;
@@ -1515,6 +1836,27 @@ transform: scaleX(1);
         width: 50%;
         height: 50%;
     }
+
+    /* Sign up form */
+    .sign-up-wrapper {
+        width: 362px;
+    }
+    .sign-up-box-left {
+        border-radius: 12px;
+    }
+    .connect-other-account {
+        display: block;
+    }
+    /* Sign in form */
+    .sign-in-wrapper {
+        width: 362px;
+    }
+    .sign-in-box-left {
+        border-radius: 12px;
+    }
+    .connect-other-account {
+        display: block;
+    }
 }
 
 /* Tablet */
@@ -1534,10 +1876,13 @@ transform: scaleX(1);
     .header__navbar-item, .header__navbar-item .item-link {
         font-size: 1.6rem;
     }
-
     .sign-up-wrapper {
-        width: 732px;
+        width: 728px;
     }
+    .sign-in-wrapper {
+        width: 728px;
+    }
+    
 }
 
 /* >= Tablet */
