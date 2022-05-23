@@ -21,6 +21,7 @@ html {
     font-family: helveticaNeue,helvetica,Arial,sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 img {
