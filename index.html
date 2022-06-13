@@ -755,7 +755,10 @@
        <!-- Body -->
         <div class="container">
             <div class="container__slider">
-                <img src="../TN-Shop.github.io/assets/img/Slider/slider-6.jpg" alt="" class="container__slider-img">
+                <img src="../TN-Shop.github.io/assets/img/Slider/slider-6.jpg" alt="" class="container__slider-img slide fade">
+                <img src="../TN-Shop.github.io/assets/img/Slider/slider-4.jpg" alt="" class="container__slider-img slide fade">
+                <img src="../TN-Shop.github.io/assets/img/Slider/slider-3.jpg" alt="" class="container__slider-img slide fade">
+                <img src="../TN-Shop.github.io/assets/img/Slider/slider-2.jpg" alt="" class="container__slider-img slide fade">
             </div>
             
             <!-- Best sellers -->
@@ -1122,5 +1125,27 @@
              signInlink.addEventListener('click',hideFormSignUp);
              signInlink.addEventListener('click',showFormSignIn);
          </script>
+  <script>
+            var slideIndex;
+
+                function showslide() {
+                var i;
+                var slide= document.getElementsByClassName("slide");
+
+                for (i = 0; i< slide.length; i++) {
+                slide[i].style.display= "none";
+            }
+
+                slide[slideIndex].style.display="block";
+            slideIndex++;
+                if (slideIndex > slide.length - 1 ) {
+                slideIndex = 0;
+
+            }
+
+                setTimeout(showslide,5000);
+                }
+            showslide(slideIndex=0);
+        </script>
 </body>
 </html>
