@@ -2,7 +2,8 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
-    --main-color: linear-gradient(0,#fd56a4e5,#FF9966);
+    --text-color2: #3a4754;
+    --main-color: linear-gradient(0,#fd56a4,#FF9966);
 
     --header-height: 120px;
     --navbar-height: 60px;
@@ -20,6 +21,7 @@ html {
     font-family: helveticaNeue,helvetica,Arial,sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 img {
