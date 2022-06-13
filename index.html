@@ -1125,28 +1125,27 @@
              signInlink.addEventListener('click',hideFormSignUp);
              signInlink.addEventListener('click',showFormSignIn);
          </script>
+  <script>
+            var slideIndex;
 
-            <script>
-                var slideIndex;
+                function showslide() {
+                var i;
+                var slide= document.getElementsByClassName("slide");
 
-                    function showslide() {
-                    var i;
-                    var slide= document.getElementsByClassName("slide");
+                for (i = 0; i< slide.length; i++) {
+                slide[i].style.display= "none";
+            }
 
-                    for (i = 0; i< slide.length; i++) {
-                    slide[i].style.display= "none";
+                slide[slideIndex].style.display="block";
+            slideIndex++;
+                if (slideIndex > slide.length - 1 ) {
+                slideIndex = 0;
+
+            }
+
+                setTimeout(showslide,5000);
                 }
-
-                    slide[slideIndex].style.display="block";
-                slideIndex++;
-                    if (slideIndex > slide.length - 1 ) {
-                    slideIndex = 0;
-
-                }
-
-                    setTimeout(showslide,5000);
-                    }
-                showslide(slideIndex=0);
-            </script>
+            showslide(slideIndex=0);
+        </script>
 </body>
 </html>
