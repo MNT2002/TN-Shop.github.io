@@ -2,9 +2,10 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
-    --main-color: linear-gradient(0,#fd56a4e5,#FF9966);
+    --text-color2: #3a4754;
+    --main-color: linear-gradient(0,#fd56a4,#FF9966);
 
-    --header-height: 110px;
+    --header-height: 120px;
     --navbar-height: 60px;
     --menu-height: calc(var(--header-height) - var(--navbar-height));
 }
@@ -20,6 +21,13 @@ html {
     font-family: helveticaNeue,helvetica,Arial,sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
 }
 
 .grid {
@@ -41,6 +49,10 @@ html {
     display: flex;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .column-full {
     width: 100%;
 }
@@ -52,7 +64,6 @@ html {
 .column-3 {
     width: calc(100% / 3);
 }
-
 
 .column-4 {
     width: 25%;
@@ -72,3 +83,20 @@ html {
 .mr-48 {
     margin-right: 48px;
 }
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name:  fade;
+    animation-duration: 3s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+  }
