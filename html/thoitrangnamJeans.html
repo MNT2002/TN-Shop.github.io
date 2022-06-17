@@ -338,7 +338,7 @@
 
                     <div class="header__logo">
                         <!-- <img src="../img/logo.png" alt="Logo-TN-shop"> -->
-                        <a href="../TN-Shop.github.io/index.html">TN-SHOP</a>
+                        <a href="../index.html">TN-SHOP</a>
                     </div>
 
                     <ul class="header__navbar-list flex-right">
@@ -414,6 +414,7 @@
                             <i class="fa-solid fa-cart-shopping"></i>
                         </li>
 
+                        <!-- zzzzzzzzzzzzzzzzzzzzzzz -->
                         <!-- Cart list -->
                         <section class="cart">
                             <h2>
@@ -430,42 +431,24 @@
                                             <th>Sản phẩm</th>
                                             <th>Giá</th>
                                             <th>SL</th>
-                                            <th>Chọn</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td style="display:flex ;align-items:center;"><img style="width: 80px;margin-right: 6px" src="../img/AoThunNu/4-ÁO THUN ORGANIC COTTON-4.375.000.jpg" alt="">ÁO THUN ORGANIC COTTON</td>
-                                            <td>
-                                                <p><span>4.375.000</span><sup>d</sup></p>
+                                            <td style="display:flex ;align-items:center;">
+                                                <img style="width: 80px;margin-right: 6px;" src="../img/AoThunNu/4-ÁO THUN ORGANIC COTTON-4.375.000.jpg" alt="">
+                                                <span style="margin-left: 4px;">ÁO THUN ORGANIC COTTON</span>
                                             </td>
-                                            <td><input style="width: 30px; outline: none;" type="number" value="1" min="1"></td>
-                                            <td style="cursor:pointer;">Xoa</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="display:flex ;align-items:center;"><img style="width: 80px;margin-right: 6px" src="../img/ChanVayNu/11-CHÂN VÁY TWEED NGẮN-6.825.000.jpg" alt="">CHÂN VÁY TWEED NGẮN</td>
-                                            <td>
-                                                <p><span>6.825.000</span><sup>d</sup></p>
+                                            <td style="margin-left: 8px;">
+                                                <p><span>4.375.000</span><sup>₫</sup></p>
                                             </td>
-                                            <td><input style="width: 30px; outline: none;" type="number" value="1" min="1"></td>
-                                            <td style="cursor:pointer;">Xoa</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="display:flex ;align-items:center"><img style="width: 80px;margin-right: 6px" src="../img/QuanJeansNam/9 - Quần jeans xám mài bạc - 5.775.000.jpg" alt="">QUẦN JEANS XÁM MÀI BẠC</td>
                                             <td>
-                                                <p><span>5.775.000</span><sup>d</sup></p>
+                                                <input style="width: 30px; outline: none; margin-left: 4px;" type="number" value="1" min="1">
+                                                <span style="cursor: pointer;">Xóa</span>
                                             </td>
-                                            <td><input style="width: 30px; outline: none;" type="number" value="1" min="1"></td>
-                                            <td style="cursor:pointer;">Xoa</td>
                                         </tr>
-                                        <tr>
-                                            <td style="display:flex ;align-items:center"><img style="width: 80px;margin-right: 6px" src="../img/Nu_ChanVay_QuanShort/2 - Quần short phối thêu - 5.425.000.jpg" alt="">QUẦN SHORT PHỐI THÊU</td>
-                                            <td>
-                                                <p><span>5.425.000</span><sup>d</sup></p>
-                                            </td>
-                                            <td><input style="width: 30px; outline: none;" type="number" value="1" min="1"></td>
-                                            <td style="cursor:pointer;">Xoa</td>
-                                        </tr>
+                                       
+                                    
                                     </tbody>
                                 </table>
                                 <div style="text-align:right;" class="price-total">
@@ -881,7 +864,7 @@
             <div class="product-container">
                 <div class="row flex-wrap" style="margin: 0 -4px">
                     <div class="col-2 col-3 column-4 product-item-wrapper">
-                        <div class="product-item-link">
+                        <a class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
                                     <img src="../img/QuanJeansNam/1 - Quần Jeans thô ống suông hẹp - 5.775.000.jpg"
@@ -890,17 +873,18 @@
 
                                 <div class="product-item__details">
                                     <div class="product-item__name">
-                                        <a href="">Quần Jeans thô ống suông hẹp</a>
+                                        <h1>Quần Jeans thô ống suông hẹp</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.775.000 ₫</span>
+                                        <span>5.775.000</span><sup>₫</sup>
                                     </div>
                                 </div>
+                                <button class="btn-add-cart">Them vao gio hang</button>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-2 col-3 column-4 product-item-wrapper">
-                        <a href="" class="product-item-link">
+                        <a class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
                                     <img src="../img/QuanJeansNam/2 - Quần Jeans ống suông - 5.775.000.jpg" alt="">
@@ -908,17 +892,17 @@
 
                                 <div class="product-item__details">
                                     <div class="product-item__name">
-                                        <a href="">Quần Jeans ống suông</a>
+                                        <h1>Quần Jeans ống suông</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.775.000 ₫</span>
+                                        <span>5.775.000</span><sup>₫</sup>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-2 col-3 column-4 product-item-wrapper">
-                        <a href="" class="product-item-link">
+                        <a class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
                                     <img src="../img/QuanJeansNam/3 - Quần Jeans dáng slim-fit - 5.775.000.jpg" alt="">
@@ -926,17 +910,17 @@
 
                                 <div class="product-item__details">
                                     <div class="product-item__name">
-                                        <a href="">Quần Jeans dáng slim-fit</a>
+                                        <h1>Quần Jeans dáng slim-fit</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.775.000 ₫</span>
+                                        <span>5.775.000</span><sup>₫</sup>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-2 col-3 column-4 product-item-wrapper">
-                        <a href="" class="product-item-link">
+                        <a class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
                                     <img src="../img/QuanJeansNam/4 - Quần Jeans mài bạc - 5.425.000.jpg" alt="">
@@ -944,17 +928,17 @@
 
                                 <div class="product-item__details">
                                     <div class="product-item__name">
-                                        <a href="">Quần Jeans mài bạc</a>
+                                        <h1>Quần Jeans mài bạc</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.425.000 ₫</span>
+                                        <span>5.425.000</span><sup>₫</sup>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-2 col-3 column-4 product-item-wrapper">
-                        <a href="" class="product-item-link">
+                        <a class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
                                     <img src="../img/QuanJeansNam/5 - QUẦN WASHED JEANS MÀI - DÁNG SLIM CUT - 5.775.000.jpg"
@@ -963,17 +947,17 @@
 
                                 <div class="product-item__details">
                                     <div class="product-item__name">
-                                        <a href="">QUẦN WASHED JEANS MÀI - DÁNG SLIM CUT</a>
+                                        <h1>QUẦN WASHED JEANS MÀI - DÁNG SLIM CUT</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.775.000 ₫</span>
+                                        <span>5.775.000</span><sup>₫</sup>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-2 col-3 column-4 product-item-wrapper">
-                        <a href="" class="product-item-link">
+                        <a class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
                                     <img src="../img/QuanJeansNam/6- Quần skinny Jeans Denim thô - 5.775.000.jpg"
@@ -982,17 +966,17 @@
 
                                 <div class="product-item__details">
                                     <div class="product-item__name">
-                                        <a href="">Quần skinny Jeans Denim thô</a>
+                                        <h1>Quần skinny Jeans Denim thô</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.775.000 ₫</span>
+                                        <span>5.775.000</span><sup>₫</sup>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-2 col-3 column-4 product-item-wrapper">
-                        <a href="" class="product-item-link">
+                        <a class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
                                     <img src="../img/QuanJeansNam/7 - QUẦN JEANS SLIM-FIT - 5.775.000.jpg" alt="">
@@ -1000,17 +984,17 @@
 
                                 <div class="product-item__details">
                                     <div class="product-item__name">
-                                        <a href="">QUẦN JEANS SLIM-FIT</a>
+                                        <h1>QUẦN JEANS SLIM-FIT</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.775.000 ₫</span>
+                                        <span>5.775.000</span><sup>₫</sup>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-2 col-3 column-4 product-item-wrapper">
-                        <a href="" class="product-item-link">
+                        <a class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
                                     <img src="../img/QuanJeansNam/8 - QUẦN JEANS MÀU BẠC - 5.425.000.jpg" alt="">
@@ -1018,17 +1002,17 @@
 
                                 <div class="product-item__details">
                                     <div class="product-item__name">
-                                        <a href="">QUẦN JEANS MÀU BẠC</a>
+                                        <h1>QUẦN JEANS MÀU BẠC</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.425.000 ₫</span>
+                                        <span>5.425.000</span><sup>₫</sup>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-2 col-3 column-4 product-item-wrapper">
-                        <a href="" class="product-item-link">
+                        <a class="product-item-link">
                             <div class="product-item">
                                 <div class="product-item__img">
                                     <img src="../img/QuanJeansNam/9 - Quần jeans xám mài bạc - 5.775.000.jpg" alt="">
@@ -1036,10 +1020,10 @@
 
                                 <div class="product-item__details">
                                     <div class="product-item__name">
-                                        <a href="">Quần jeans xám mài bạc</a>
+                                        <h1>Quần jeans xám mài bạc</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.425.000 ₫</span>
+                                        <span>5.425.000</span><sup>₫</sup>
                                     </div>
                                 </div>
                             </div>
@@ -1169,7 +1153,7 @@
                     <li><a href="">Chính sách bảo mật</a></li>
                     <li><a href="">Chính sách Cookie</a></li>
 
-                    <img src="../TN-Shop.github.io/assets/img/bocongthuong.png" alt="">
+                    <img src="../img/bocongthuong.png" alt="">
                 </div>
             </div>
 
@@ -1249,7 +1233,7 @@
         signInlink.addEventListener('click', showFormSignIn);
     </script>
 
-    <script src="../main.js"></script>
+    <script src="../javascript/main.js"></script>
 </body>
 
 </html>

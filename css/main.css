@@ -1382,6 +1382,7 @@ transform: scaleX(1);
 .product-item-link {
     width: 100%;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .product-item {
@@ -1417,9 +1418,9 @@ transform: scaleX(1);
     padding-top: 24px;
 }
 
-.product-item__name a {
-    text-decoration: none;
+.product-item__name h1 {
     color: var(--text-color);
+    font-size: 1.3rem;
     display:-webkit-box;
     -webkit-line-clamp:1;
     -webkit-box-orient: vertical;
@@ -1690,6 +1691,8 @@ transform: scaleX(1);
     color: var(--text-color);
     margin-right: 12px;
 }
+
+/* Responsive */
 /* Mobile & Tablet */
 @media (max-width: 63.9475em) {
     .display-none {
