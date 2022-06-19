@@ -8,6 +8,7 @@
     <title>Quần Jeans - Thời trang nam - TN Shop</title>
     <link rel="icon" href="../img/NT2.png" type="image/gif" sizes="20x20">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../css/notification.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/main.css">
 
@@ -414,7 +415,6 @@
                             <i class="fa-solid fa-cart-shopping"></i>
                         </li>
 
-                        <!-- zzzzzzzzzzzzzzzzzzzzzzz -->
                         <!-- Cart list -->
                         <section class="cart">
                             <h2>
@@ -425,37 +425,35 @@
                             </div>
 
                             <form action="">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Sản phẩm</th>
-                                            <th>Giá</th>
-                                            <th>SL</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td style="display:flex ;align-items:center;">
-                                                <img style="width: 80px;margin-right: 6px;" src="../img/AoThunNu/4-ÁO THUN ORGANIC COTTON-4.375.000.jpg" alt="">
-                                                <span style="margin-left: 4px;">ÁO THUN ORGANIC COTTON</span>
-                                            </td>
-                                            <td style="margin-left: 8px;">
-                                                <p><span>4.375.000</span><sup>₫</sup></p>
-                                            </td>
-                                            <td>
-                                                <input style="width: 30px; outline: none; margin-left: 4px;" type="number" value="1" min="1">
-                                                <span style="cursor: pointer;">Xóa</span>
-                                            </td>
-                                        </tr>
-                                       
-                                    
-                                    </tbody>
-                                </table>
-                                <div style="text-align:right;" class="price-total">
-                                    <p style="font-weight: bold;">Tong Tien<span>0</span><sup>d</sup></p>
+                                <div class="form-cart-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr style="user-select: none;">
+                                                <th>Sản phẩm</th>
+                                                <th>Giá</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="cart__tbody">
+                                            <!-- <tr>
+                                                <td class="cart-product-img-name">
+                                                    <img src="../img/AoSoMiNu/11-ÁO SƠ MI OVERSIZE-6.825.000.jpg" alt="">
+                                                    <span class="cart-product-name">ÁO SƠ MI OVERSIZE</span>
+                                                </td>
+                                                <td class="cart-product-price">
+                                                    <p><span>6.825</span><span>.000</span><sup>₫</sup></p></td>
+                                                <td class="cart-product-amount">
+                                                    <input type="number" value="1" min="1"><span>Xóa</span>
+                                                </td>
+                                            <tr> -->
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <span><button class="Buy" onclick="pay()">Thanh toán</button></span>
-
+                                <div class="price-total">
+                                    <p>Tổng tiền: <span>0</span><sup>₫</sup></p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <button class="Buy" onclick="pay()">Thanh toán</button>
+                                </div>
                             </form>
                         </section>
 
@@ -491,10 +489,6 @@
                                             <span>Tôi đồng ý với các quy tắc và điều kiện</span>
                                         </label>
                                         <button>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
                                             Tạo tài khoản
                                         </button>
 
@@ -850,6 +844,11 @@
                 </div>
             </div>
 
+
+            <!-- Hien box thong bao them sp -->
+            <div id="toast">
+                
+            </div>
         </header>
 
         <!-- Body -->
@@ -876,10 +875,13 @@
                                         <h1>Quần Jeans thô ống suông hẹp</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.775.000</span><sup>₫</sup>
+                                        <span>5.775</span><span>.000</span><sup>₫</sup>
                                     </div>
                                 </div>
-                                <button class="btn-add-cart">Them vao gio hang</button>
+                                <button class="btn-add-cart">
+                                    Thêm
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
                             </div>
                         </a>
                     </div>
@@ -895,9 +897,13 @@
                                         <h1>Quần Jeans ống suông</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.775.000</span><sup>₫</sup>
+                                        <span>5.775</span><span>.000</span><sup>₫</sup>
                                     </div>
                                 </div>
+                                <button class="btn-add-cart">
+                                    Thêm
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
                             </div>
                         </a>
                     </div>
@@ -913,9 +919,13 @@
                                         <h1>Quần Jeans dáng slim-fit</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.775.000</span><sup>₫</sup>
+                                        <span>5.775</span><span>.000</span><sup>₫</sup>
                                     </div>
                                 </div>
+                                <button class="btn-add-cart">
+                                    Thêm
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
                             </div>
                         </a>
                     </div>
@@ -931,9 +941,13 @@
                                         <h1>Quần Jeans mài bạc</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.425.000</span><sup>₫</sup>
+                                        <span>5.425</span><span>.000</span><sup>₫</sup>
                                     </div>
                                 </div>
+                                <button class="btn-add-cart">
+                                    Thêm
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
                             </div>
                         </a>
                     </div>
@@ -950,9 +964,13 @@
                                         <h1>QUẦN WASHED JEANS MÀI - DÁNG SLIM CUT</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.775.000</span><sup>₫</sup>
+                                        <span>5.775</span><span>.000</span><sup>₫</sup>
                                     </div>
                                 </div>
+                                <button class="btn-add-cart">
+                                    Thêm
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
                             </div>
                         </a>
                     </div>
@@ -969,9 +987,13 @@
                                         <h1>Quần skinny Jeans Denim thô</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.775.000</span><sup>₫</sup>
+                                        <span>5.775</span><span>.000</span><sup>₫</sup>
                                     </div>
                                 </div>
+                                <button class="btn-add-cart">
+                                    Thêm
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
                             </div>
                         </a>
                     </div>
@@ -987,9 +1009,13 @@
                                         <h1>QUẦN JEANS SLIM-FIT</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.775.000</span><sup>₫</sup>
+                                        <span>5.775</span><span>.000</span><sup>₫</sup>
                                     </div>
                                 </div>
+                                <button class="btn-add-cart">
+                                    Thêm
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
                             </div>
                         </a>
                     </div>
@@ -1005,9 +1031,13 @@
                                         <h1>QUẦN JEANS MÀU BẠC</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.425.000</span><sup>₫</sup>
+                                        <span>5.425</span><span>.000</span><sup>₫</sup>
                                     </div>
                                 </div>
+                                <button class="btn-add-cart">
+                                    Thêm
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
                             </div>
                         </a>
                     </div>
@@ -1023,9 +1053,13 @@
                                         <h1>Quần jeans xám mài bạc</h1>
                                     </div>
                                     <div class="product-item__price">
-                                        <span>5.425.000</span><sup>₫</sup>
+                                        <span>5.425</span><span>.000</span><sup>₫</sup>
                                     </div>
                                 </div>
+                                <button class="btn-add-cart">
+                                    Thêm
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
                             </div>
                         </a>
                     </div>
@@ -1234,6 +1268,7 @@
     </script>
 
     <script src="../javascript/main.js"></script>
+    <script src="../javascript/notification.js"></script>
 </body>
 
 </html>

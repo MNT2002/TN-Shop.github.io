@@ -375,57 +375,59 @@
                                 <div class="close-icon-wrapper">
                                     <i class="fa-solid fa-xmark"></i>
                                 </div>
-                                
+    
                                 <form action="">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Sản phẩm</th>
-                                                <th>Giá</th>
-                                                <th>SL</th>
-                                                <th>Chọn</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td style="display:flex ;align-items:center;"><img style="width: 80px;margin-right: 6px" src="./img/AoThunNu/4-ÁO THUN ORGANIC COTTON-4.375.000.jpg" alt="">ÁO THUN ORGANIC COTTON</td>
-                                                <td>
-                                                    <p><span>4.375.000</span><sup>d</sup></p>
-                                                </td>
-                                                <td><input style="width: 30px; outline: none;" type="number" value="1" min="1"></td>
-                                                <td style="cursor:pointer;">Xoa</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="display:flex ;align-items:center;"><img style="width: 80px;margin-right: 6px" src="./img/ChanVayNu/4-CHÂN VÁY TWEED NGẮN-6.825.000.jpg" alt="">CHÂN VÁY TWEED NGẮN</td>
-                                                <td>
-                                                    <p><span>6.825.000</span><sup>d</sup></p>
-                                                </td>
-                                                <td><input style="width: 30px; outline: none;" type="number" value="1" min="1"></td>
-                                                <td style="cursor:pointer;">Xoa</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="display:flex ;align-items:center"><img style="width: 80px;margin-right: 6px" src="./img/QuanJeansNam/9 - Quần jeans xám mài bạc - 5.775.000.jpg" alt="">QUẦN JEANS XÁM MÀI BẠC</td>
-                                                <td>
-                                                    <p><span>5.775.000</span><sup>d</sup></p>
-                                                </td>
-                                                <td><input style="width: 30px; outline: none;" type="number" value="1" min="1"></td>
-                                                <td style="cursor:pointer;">Xoa</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="display:flex ;align-items:center"><img style="width: 80px;margin-right: 6px" src="./img/Nu_ChanVay_QuanShort/2 - Quần short phối thêu - 5.425.000.jpg" alt="">QUẦN SHORT PHỐI THÊU</td>
-                                                <td>
-                                                    <p><span>5.425.000</span><sup>d</sup></p>
-                                                </td>
-                                                <td><input style="width: 30px; outline: none;" type="number" value="1" min="1"></td>
-                                                <td style="cursor:pointer;">Xoa</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div style="text-align:right;" class="price-total">
-                                        <p style="font-weight: bold;">Tong Tien<span>0</span><sup>d</sup></p>
+                                    <div class="form-cart-wrapper">
+                                        <table>
+                                            <thead>
+                                                <tr style="user-select: none;">
+                                                    <th>Sản phẩm</th>
+                                                    <th>Giá</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="cart__tbody">
+                                                <tr>
+                                                    <td class="cart-product-img-name">
+                                                        <img src="./img/AoSoMiNu/11-ÁO SƠ MI OVERSIZE-6.825.000.jpg" alt="">
+                                                        <span class="cart-product-name">ÁO SƠ MI OVERSIZE</span>
+                                                    </td>
+                                                    <td class="cart-product-price">
+                                                        <p><span>6.825</span><span>.000</span><sup>₫</sup></p></td>
+                                                    <td class="cart-product-amount">
+                                                        <input type="number" value="1" min="1"><span>Xóa</span>
+                                                    </td>
+                                                <tr>
+                                                    <td class="cart-product-img-name">
+                                                        <img src="./img/AoKhoacNu/2-ÁO KHOÁC NHIỀU CHẤT LIỆU-12.775.000.jpg" alt="">
+                                                        <span class="cart-product-name">ÁO KHOÁC NHIỀU CHẤT LIỆU</span>
+                                                    </td>
+                                                    <td class="cart-product-price">
+                                                        <p><span>12.775</span><span>.000</span><sup>₫</sup></p></td>
+                                                    <td class="cart-product-amount">
+                                                        <input type="number" value="1" min="1"><span>Xóa</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cart-product-img-name">
+                                                        <img src="./img/QuanTayNam/2 - QUẦN TÂY JERSEY - 7.875.000.jpg" alt="">
+                                                        <span class="cart-product-name">QUẦN TÂY JERSEY</span>
+                                                    </td>
+                                                    <td class="cart-product-price">
+                                                        <p><span>7.875</span><span>.000</span><sup>₫</sup></p></td>
+                                                    <td class="cart-product-amount">
+                                                        <input type="number" value="1" min="1"><span>Xóa</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <span><button class="Buy" onclick="pay()" >Thanh toán</button></span>
-                                    
+                                    <div class="price-total">
+                                        <p>Tổng tiền: <span>0</span><sup>₫</sup></p>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <button class="Buy" onclick="pay()">Thanh toán</button>
+                                    </div>
+    
                                 </form>
                             </section>
 
